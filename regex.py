@@ -20,7 +20,7 @@ def validate(sentence, mask):
 	elif mask == 'date':
 		return re.match('[0-9]{2}/[0-9]{2}/[0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}$', sentence) != None
 	elif mask == 'float':
-		return re.match('[+-]?[0-9]+([.,]{1}[0-9]+)*$', sentence) != None
+		return re.match('[+-]?[0-9]+([.,]?[0-9]+)?$', sentence) != None
 	else:
 		raise(Exception('This sentence type is recognized by this software.'))
 
@@ -67,5 +67,5 @@ serialize_tests('date',
 
 # Float
 serialize_tests('float',
-	['2.', '0,', '+,02', '+-45.1', '3,5', '3.5', '-5.2', '+12.1265', '5', '+13154.45a'])
+	['2.', '0,', '+,02', '+-45.1', '3,5', '3.5', '-5.2', '+12,1265', '5', '+13154.45a'])
 
