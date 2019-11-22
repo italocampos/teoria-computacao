@@ -1,0 +1,9 @@
+Examples:
+G1 = ({S, B}, {a, b}, {S -> aB|aSB, B -> b}, S)
+G2 = ({S}, {a, b}, {S -> aSb|ab}, S)
+G3 = ({A, B, C},
+	{a, b},
+	{A -> aAB|bB|aACB|bCB|a,
+	B -> aA|b|aAC|bC},
+	C -> aAA|bA|aACA|bCA|aAAC|bAC|aACAC|bCAC},
+	A)
