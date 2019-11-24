@@ -1,7 +1,23 @@
 Examples:
-G1 = ({S, B}, {a, b}, {S -> aB|aSB, B -> b}, S)
-G2 = ({S}, {a, b}, {S -> aSb|ab}, S)
-G3 = ({A, B, C},
+# Duplo balanceamento
+G = ({S, B}, {a, b}, {S -> aB|aSB, B -> b}, S)
+
+# Palidromos
+# Exercício 6.3d Blauth P. (2011) na FNG
+G = ({S, A, B}, {a, b}, {S->a|b|aSA|bSB, A->a, B->b}, S)
+
+# Exercício 6.3e Blauth P. (2011) na FNG
+G = ({S, A, B}, {a, b}, {S->a|b|aSA|bSB|aA|bB, A->a, B->b}, S)
+
+# Balanceamento de parêntesis
+# Exercício 6.3g Blauth P. (2011) na FNG
+G = ({S, A}, {x, y, (, )}, {S->(SA|xS|yS|x|y|(A|(SAS|xSS|ySS|(AS, A->)}, S)
+
+# GLC que não está na FNG
+G = ({S}, {a, b}, {S -> aSb|ab}, S)
+
+# Exemplo 6.14 de Blauth P. (2011)
+G = ({A, B, C},
 	{a, b},
 	{A -> aAB|bB|aACB|bCB|a,
 	B -> aA|b|aAC|bC},

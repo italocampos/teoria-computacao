@@ -1,1 +1,1 @@
-G1 = ({S, B}, {a, b}, {S -> aB|aSB, B -> b}, S)
+G = ({S, A}, {x, y, (, )}, {S->(SA|xS|yS|x|y|(A|(SAS|xSS|ySS|(AS, A->)}, S)

@@ -1,23 +1,31 @@
 class Stack:
-	def __init__(self, elements = list()):
-		self.stack = list()
-		self.stack += elements
+	def __init__(self, items = list()):
+		self._stack = list()
+		self.push(items)
 
-	def elements(self):
-		return len(self.stack)
+	def length(self):
+		return len(self._stack)
 
-	def push(self, element):
-		self.stack.append(element)
+	@property
+	def items(self):
+		return self._stack
+
+	def push(self, item):
+		if item not in ['', []]:
+			for i in item[::-1]:
+				self._stack.append(i)
 
 	def pop(self):
-		return self.stack.pop()
+		if self.length() > 0:
+			return self._stack.pop()
 
-	def head(self, element):
-		return self.stack[-1] == element
+	def head(self, item):
+		if self.empty():
+			return False
+		return self._stack[-1] == item
 
-	def pop_if(self, element):
-		if self.head(element):
-			return self.pop()
+	def empty(self):
+		return self._stack == []
 	
 	def __str__(self):
-		return str(self.stack)
+		return str(self._stack)

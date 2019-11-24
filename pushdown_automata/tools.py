@@ -32,7 +32,7 @@ def check_gnf(G):
 			else:
 				return False
 	else:
-		False
+		return False
 	return True
 
 
