@@ -1,2 +1,2 @@
-# Duplo balanceamento
-G = ({S, B}, {a, b}, {S -> aB|aSB, B -> b}, S)
+# Exercício 6.3e Blauth P. (2011) na FNG
+G = ({S, A, B}, {a, b}, {S->a|b|aSA|bSB|aA|bB, A->a, B->b}, S)

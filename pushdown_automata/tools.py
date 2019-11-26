@@ -64,3 +64,11 @@ def read_from_file(file_name):
 	G['R'] = result
 	return G
 
+
+def debug(level, transition, stack):
+	space = '  '
+	ident = ''
+	for i in range(level):
+		ident += space
+	print('%sLEVEL: %d. Transition %s' % (ident, level, transition))
+	print('%sStack: %s' % (ident, stack))

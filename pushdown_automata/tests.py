@@ -33,6 +33,6 @@ G4 = {'V': ['S', 'A'],
 	'S': 'S'}
 
 # Para ler uma nova gramática do arquivo, descomente a linha abaixo
-#G = read_from_file('grammar.in')
+G = read_from_file('grammar.in')
 
 auto = PDAutomata(G)

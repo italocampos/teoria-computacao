@@ -1,5 +1,5 @@
 from stack import Stack
-from tools import check_gnf
+from tools import check_gnf, debug
 
 class PDAutomata:
 	def __init__(self, G = {'V':[], 'T':[], 'R':[], 'S':''}):
@@ -42,9 +42,7 @@ class PDAutomata:
 				s = Stack(stack.items[::-1])
 				s.pop()
 				s.push(S)
-				#print('CHECKING: level %d, transition %s' % (index, str(transition)))
-				#print('Current stack: %s' % str(stack))
+				debug(index, transition, stack)
 				if self._run(word, index + 1, s):
 					return True
-				#print('FAILURE: level %d, transition %s' % (index, str(transition)))
 		return False
